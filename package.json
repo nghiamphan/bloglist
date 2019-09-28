@@ -1,0 +1,29 @@
+{
+  "name": "bloglist",
+  "version": "0.0.1",
+  "description": " allows users to save information about interesting blogs they have stumbled across on the internet",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon index.js",
+    "lint": "eslint .",
+    "deploy": "git push heroku master",
+    "test": "jest --verbose"
+  },
+  "author": "Nghia",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
