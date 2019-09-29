@@ -4,11 +4,11 @@
   "description": " allows users to save information about interesting blogs they have stumbled across on the internet",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "watch": "nodemon index.js",
+    "start": "cross-env NODE_ENV=production node index.js",
+    "watch": "cross-env NODE_ENV=development nodemon index.js",
     "lint": "eslint .",
     "deploy": "git push heroku master",
-    "test": "jest --verbose"
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
   },
   "author": "Nghia",
   "license": "ISC",
@@ -16,12 +16,15 @@
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "mongoose": "^5.7.1"
+    "mongoose": "^5.7.1",
+    "mongoose-validator": "^2.1.0"
   },
   "devDependencies": {
+    "cross-env": "^6.0.0",
     "eslint": "^6.4.0",
     "jest": "^24.9.0",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "supertest": "^4.0.2"
   },
   "jest": {
     "testEnvironment": "node"
